@@ -8,6 +8,7 @@
 include_once("config.php");
 
 include_once("Logging.php");
+include_once("Cache.php");
 
 
 

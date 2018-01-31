@@ -12,7 +12,7 @@
 // 以后长记性，这种工具类的玩意都得独立出来
 
 // route需要把日志塞入对应的app内，所以需要给出接口，可以设置app的log_dir
-defined("LOG_DIR") or define("LOG_DIR", dirname(__FILE__) . "/../logs/");
+defined("LOG_DIR") or define("LOG_DIR", dirname(__FILE__) . "/logs/");
 
 class Logging {
 	
