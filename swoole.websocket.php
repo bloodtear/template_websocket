@@ -13,8 +13,8 @@ class Websocket {
   }
 
   public function __construct() {
-    //$this->server = new swoole_websocket_server(WS_HOST, WS_PORT, SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
-    $this->server = new swoole_websocket_server('0.0.0.0', 9501);
+    $this->server = new swoole_websocket_server(WS_HOST, WS_PORT, SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
+    //$this->server = new swoole_websocket_server('0.0.0.0', 9501);
     $this->server->set(array(
       'ssl_cert_file' => '/etc/nginx/ssl/bloodtear.cn.crt',
       'ssl_key_file' => '/etc/nginx/ssl/bloodtear.cn.key',
