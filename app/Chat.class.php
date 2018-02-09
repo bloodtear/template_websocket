@@ -13,10 +13,12 @@ class Chat {
 
     $from = $this->data->from;
     $data = $this->data->data;
-    $ws = Websocket::instance();
+    $ws   = Websocket::instance();
+
     $array = array(
-      "op" => "receive",
-      "data" => "$from: $data"
+      "op"    => "receive",
+      "data"  => "$from: $data",
+      "time"  => time();
     );
 
     $cache = Cache::instance();
