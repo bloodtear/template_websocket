@@ -18,7 +18,7 @@ class Chat {
     $array = array(
       "op"    => "receive",
       "data"  => "$from: $data",
-      "time"  => time();
+      "time"  => time()
     );
 
     $cache = Cache::instance();
