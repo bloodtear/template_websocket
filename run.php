@@ -6,17 +6,12 @@
 // * Logging也独立出来，不再调用framework内，直接内部存留一份
 // * 
 // * * * * *
-include_once("config.php");
-include_once("Logging.php");
-include_once("Cache.php");
 
-include_once("swoole.websocket.php");
+include_once("framework/Websocket.php");
 
-
-$ws = Websocket::instance();
+$ws = \framework\Websocket::inst();
+//$ws = Websocket::inst();
 $ws->set_up();
 $ws->start();
 
 
-
-?>

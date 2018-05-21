@@ -1,6 +1,6 @@
 <?php
 
-
+namespace framework;
 
 class Cache{
 
@@ -15,7 +15,7 @@ class Cache{
   }
 
   private function __construct() {
-    $this->redis = new Redis();
+    $this->redis = new \Redis();
     $this->redis->connect(REDIS_HOST, REDIS_PORT);
     $this->redis->auth(REDIS_PWD);  
   }

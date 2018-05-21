@@ -1,5 +1,7 @@
 <?php
 
+namespace framework;
+
 // 日志格式
 // yyyy-mm-dd hh:mm:ss: 毫秒  用户名称 登录ip(公网)   日志等级/日志模块   日志内容
 // 2017-12-31 10：10：10 293  xiaoyu  10.15.76.87   D/LOGIN    username : xiaoyu login.
@@ -12,7 +14,7 @@
 // 以后长记性，这种工具类的玩意都得独立出来
 
 // route需要把日志塞入对应的app内，所以需要给出接口，可以设置app的log_dir
-defined("LOG_DIR") or define("LOG_DIR", dirname(__FILE__) . "/logs/");
+defined("LOG_DIR") or define("LOG_DIR", dirname(__FILE__) . "/../logs/");
 
 class Logging {
 	
@@ -168,7 +170,3 @@ class Logging {
 
 
 
-
-
-
-?>
